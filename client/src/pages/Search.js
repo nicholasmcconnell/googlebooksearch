@@ -7,6 +7,7 @@ import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBar from "../components/SearchBar";
 import * as API from "../utils/API";
+import { titleCase } from 'title-case';
 
 function Books() {
   // Setting our component's initial state
@@ -24,8 +25,15 @@ function Books() {
   }, [])
 
   const handleInputChange = event => {
-    console.log(event.target.value);
     setSearch(event.target.value);
+    let formattedSearch = search.replace(/ /g, '');
+    console.log(formattedSearch);
+    API.search(formattedSearch)
+      .then(res =>
+        setBooks(res.data)
+      )
+      .catch(err => console.log(err));
+      console.log(books);
   }
 
   // Loads all books and sets them to books

@@ -24,16 +24,35 @@ function Books() {
       .catch(err => console.log(err));
   }, [])
 
+
   const handleInputChange = event => {
-    setSearch(event.target.value);
-    let formattedSearch = search.replace(/ /g, '');
-    console.log(formattedSearch);
-    API.search(formattedSearch)
+    const { value } = event.target;
+    console.log(value);
+
+    setSearch(value);
+    // setSearch(event.target.value);
+    // let formattedSearch = (search.replace(/ /g, ''));
+    // let actualSearch = formattedSearch + ' ';
+
+    // console.log(actualSearch);
+    // API.search(formattedSearch)
+    //   .then(res =>
+    //     setBooks(res.data)
+    //   )
+    //   .catch(err => console.log(err));
+    //   console.log(books);
+  }
+
+  const handleFormSubmit = event => {
+    event.preventDefault();
+
+    API.search(search)
       .then(res =>
         setBooks(res.data)
       )
       .catch(err => console.log(err));
-      console.log(books);
+    console.log(books);
+
   }
 
   // Loads all books and sets them to books
@@ -78,7 +97,7 @@ function Books() {
 
           <SearchBar
             handleInputChange={handleInputChange}
-            result={search}
+            handleFormSubmit={handleFormSubmit}
           />
 
         </Col>

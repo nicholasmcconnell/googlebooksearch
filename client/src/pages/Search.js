@@ -44,21 +44,40 @@ function Books() {
     //   console.log(books);
   }
 
-  const handleFormSubmit = (event, ) => {
+  const handleFormSubmit = (event) => {
     event.preventDefault();
 
     // setSearch(event.target.value);
+    console.log("handleformsubmit ")
 
-    API.search(search)
-      .then(res =>
-        // console.log(res.data.results)
-        setBooks(res.data)
+    new Promise((resolve, rej) => {
+      console.log("inpromise")
+      API.search(search)
+        .then((res) =>
+
+          setBooks(res.data.items)
+          // setBooks(res.data.items[0].volumeInfo)
+
+
         )
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
 
+      // setBooks(promise);
+    }
+    )
   }
 
-  
+
+  // console.log("resposne " + response);
+  // console.log(response)
+
+
+
+
+
+
+
+
 
   // Loads all books and sets them to books
 
@@ -108,11 +127,11 @@ function Books() {
         </Col>
         <Col size="md-6 sm-12">
           <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            <div>
-              <Card books={books}/>
-            </div>
+            <h1>Books On My List</h1>
+          </Jumbotron>
+          <div>
+            <Card books={books} />
+          </div>
           {/* {books.length ? (
               <List books={books}>
                 {books.map(book => (

@@ -2,13 +2,24 @@ import React from 'react'
 import '../Cards/style.css';
 
 function Cards(props) {
-    console.log("incards " + props);
+    // console.log("incards " + props);
     // let { items } = props.books;
-    // console.log(props.books.items);
+    // let { items, books } = props;
+    console.log(props.books[0]);
 
-    if(!props.books.items){
-        return
+    let infoObj = []
+
+    for (let i = 0; i < (props.books).length; i++) {
+        infoObj.push(props.books[i].volumeInfo.title)
+        
     }
+    console.log(infoObj)
+
+    // if(!props.books.items){
+    //     return
+    // }
+
+    //looop throuhg prop
 
 
     return (

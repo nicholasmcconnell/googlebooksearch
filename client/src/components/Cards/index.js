@@ -3,8 +3,12 @@ import '../Cards/style.css';
 
 function Cards(props) {
     console.log("incards " + props);
-    let { items } = props.books;
-    console.log(props.books.items);
+    // let { items } = props.books;
+    // console.log(props.books.items);
+
+    if(!props.books.items){
+        return
+    }
 
 
     return (

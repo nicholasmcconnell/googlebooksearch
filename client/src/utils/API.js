@@ -1,12 +1,14 @@
 import axios from "axios";
 
-export const search = (props) => {
+export const search = (search) => {
+  console.log("in axios call")
+  console.log(search);
     return axios.get(
-      `https://www.googleapis.com/books/v1/volumes?q=${props}`
+      `https://www.googleapis.com/books/v1/volumes?q=${search}`
     );
   };
 
-  console.log(search())
+  // console.log(search())
 
   // // Gets all books
   // getBooks: function() {

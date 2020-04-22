@@ -12,18 +12,18 @@ import Card from '../components/Cards'
 
 function Books() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState({})
   const [search, setSearch] = useState("");
   const [formObject, setFormObject] = useState({})
 
   // Load all books and store them with setBooks
-  useEffect(() => {
-    API.search()
-      .then(res =>
-        setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-  }, [])
+  // useEffect(() => {
+  //   API.search(search)
+  //     .then(res =>
+  //       setBooks(res.data.results)
+  //     )
+  //     .catch(err => console.log(err));
+  // }, [search])
 
 
   const handleInputChange = event => {
@@ -44,17 +44,21 @@ function Books() {
     //   console.log(books);
   }
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = (event, ) => {
     event.preventDefault();
+
+    // setSearch(event.target.value);
 
     API.search(search)
       .then(res =>
+        // console.log(res.data.results)
         setBooks(res.data)
-      )
-      .catch(err => console.log(err));
-    // console.log(books);
+        )
+        .catch(err => console.log(err));
 
   }
+
+  
 
   // Loads all books and sets them to books
 

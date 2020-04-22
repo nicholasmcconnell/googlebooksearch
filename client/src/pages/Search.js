@@ -8,6 +8,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBar from "../components/SearchBar";
 import * as API from "../utils/API";
 import { titleCase } from 'title-case';
+import Card from '../components/Cards'
 
 function Books() {
   // Setting our component's initial state
@@ -51,7 +52,7 @@ function Books() {
         setBooks(res.data)
       )
       .catch(err => console.log(err));
-    console.log(books);
+    // console.log(books);
 
   }
 
@@ -102,11 +103,14 @@ function Books() {
 
         </Col>
         <Col size="md-6 sm-12">
-          {/* <Jumbotron>
+          <Jumbotron>
               <h1>Books On My List</h1>
-            </Jumbotron> */}
+            </Jumbotron>
+            <div>
+              <Card books={books}/>
+            </div>
           {/* {books.length ? (
-              <List>
+              <List books={books}>
                 {books.map(book => (
                   <ListItem key={book._id}>
                     <Link to={"/books/" + book._id}>

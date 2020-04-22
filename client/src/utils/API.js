@@ -6,6 +6,8 @@ export const search = (props) => {
     );
   };
 
+  console.log(search())
+
   // // Gets all books
   // getBooks: function() {
   //   return axios.get("/api/books");

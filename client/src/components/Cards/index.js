@@ -2,15 +2,21 @@ import React from 'react'
 import '../Cards/style.css';
 
 function Cards(props) {
+    console.log("incards " + props);
+    let { items } = props.books;
+    console.log(props.books.items);
+
 
     return (
 
-        <tr >
-            <td><img src={props.employee.picture.thumbnail} alt="" border="3" height="125" width="125" ></img> </td>
-            <td>{props.employee.name.first} {props.employee.name.last}</td>
-            <td>{props.employee.phone}</td>
-            <td>{props.employee.dob.date}</td>
-        </tr>
+        <div className="card">
+            <img src="" className="card-img-top" alt="..."/>
+                <div className="card-body">
+                    <h5 className="card-title"></h5>
+                    <p className="card-text"></p>
+                    <a href="#" className="btn btn-primary">Go somewhere</a>
+                </div>
+      </div>
     );
 }
 

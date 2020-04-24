@@ -22,6 +22,14 @@ tbody tr:nth-child(odd){
   border-radius: 10px;
 }
 
+.btn {
+  
+  margin-right: 15px;
+  width: 20%;
+ 
+}
+
+
 
 
 /* .card {

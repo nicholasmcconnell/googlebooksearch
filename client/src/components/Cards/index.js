@@ -5,33 +5,39 @@ function Cards(props) {
     // console.log("incards " + props);
     // let { items } = props.books;
     // let { items, books } = props;
-    console.log(props.books[0]);
+    // if ((props.book.volumeInfo.authors.length) >= 2){
 
-    let infoObj = []
+    //     // props.authorString = "";
 
-    for (let i = 0; i < (props.books).length; i++) {
-        infoObj.push(props.books[i].volumeInfo.title)
-        
-    }
-    console.log(infoObj)
+    //     for (let i = 0; i < props.book.volumeInfo.authors.length; i++) {
 
-    // if(!props.books.items){
-    //     return
-    // }
+    //         props.authorString.concat(props.book.volumeInfo.authors[i] + ", ")
+    //         // console.log(props.book.volumeInfo.authors[i])
 
-    //looop throuhg prop
+    //     }
+
+    //     console.log(props.authorString);
+    // } 
+
 
 
     return (
 
         <div className="card">
-            <img src="" className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title"></h5>
-                    <p className="card-text"></p>
-                    <a href="#" className="btn btn-primary">Go somewhere</a>
+            <img src={props.book.volumeInfo.imageLinks.smallThumbnail} className="card-img-top" alt="..." />
+            <div className="card-body">
+                <h4 className="card-title">{props.book.volumeInfo.title}</h4>
+                <h4 className="card-title">{props.book.volumeInfo.authors}</h4>
+                <p className="card-text">{props.book.volumeInfo.description}</p>
+                <div className="buttonDiv text-center d-flex justify-content-center">
+                    <a href="#" className="btn btn-primary">Save!</a>
+                    <a target="_blank" href={props.book.volumeInfo.infoLink} className="btn btn-primary">More Info!</a>
                 </div>
-      </div>
+            </div>
+
+            {console.log(props.book.volumeInfo.infoLink)}
+
+        </div>
     );
 }
 

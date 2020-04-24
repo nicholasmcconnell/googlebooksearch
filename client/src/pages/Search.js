@@ -12,9 +12,10 @@ import Card from '../components/Cards'
 
 function Books() {
   // Setting our component's initial state
-  const [books, setBooks] = useState({})
+  const [books, setBooks] = useState([])
   const [search, setSearch] = useState("");
   const [formObject, setFormObject] = useState({})
+  let authorString;
 
   // Load all books and store them with setBooks
   // useEffect(() => {
@@ -50,7 +51,7 @@ function Books() {
     // setSearch(event.target.value);
     console.log("handleformsubmit ")
 
-    new Promise((resolve, rej) => {
+    
       console.log("inpromise")
       API.search(search)
         .then((res) =>
@@ -63,8 +64,8 @@ function Books() {
         .catch(err => console.log(err))
 
       // setBooks(promise);
-    }
-    )
+    
+    
   }
 
 
@@ -130,7 +131,8 @@ function Books() {
             <h1>Books On My List</h1>
           </Jumbotron>
           <div>
-            <Card books={books} />
+            {books.length ? books.map(book => <Card book={book} key={book.id} authorString={authorString} />) : <p>Please search for a book!</p>}
+          
           </div>
           {/* {books.length ? (
               <List books={books}>

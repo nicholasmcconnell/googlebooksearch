@@ -60,6 +60,7 @@ function Books() {
   }
 
   const saveBook = (book) => {
+    console.log(book);
 
     API.saveBook(book)
       .then()
@@ -133,10 +134,16 @@ function Books() {
           <div>
             {books.length ? books.map(book =>
               <Card
-                book={book}
+                book={book.volumeInfo}
                 key={book.id}
                 // authorString={authorString} 
-                saveBook={saveBook(book)} />
+                saveBook={saveBook} 
+
+              // For save page
+              // deleteBook={deleteBook}
+              // saveView={true}
+               />
+                
                 ) : <p>Please search for a book!</p>}
 
           </div>

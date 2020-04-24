@@ -6,16 +6,20 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import SearchBar from "../components/SearchBar";
-import * as API from "../utils/API";
+import API from "../utils/API";
 import { titleCase } from 'title-case';
 import Card from '../components/Cards'
 
 function Books() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
-  const [formObject, setFormObject] = useState({})
-  let authorString;
+  const [formObject, setFormObject] = useState({});
+  const [bookId, setBookId] = useState("");
+
+  // let authorString;
+
+
 
   // Load all books and store them with setBooks
   // useEffect(() => {
@@ -48,25 +52,32 @@ function Books() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
 
-    // setSearch(event.target.value);
-    console.log("handleformsubmit ")
-
-    
-      console.log("inpromise")
-      API.search(search)
-        .then((res) =>
-
-          setBooks(res.data.items)
-          // setBooks(res.data.items[0].volumeInfo)
-
-
-        )
-        .catch(err => console.log(err))
-
-      // setBooks(promise);
-    
-    
+    API.search(search)
+      .then((res) =>
+        setBooks(res.data.items)
+      )
+      .catch(err => console.log(err))
   }
+
+  const saveBook = (book) => {
+
+    API.saveBook(book)
+      .then()
+      .catch(err => console.log(err));
+  }
+
+  // function handleFormSubmit(event) {
+  //   event.preventDefault();
+  //   if (formObject.title && formObject.author) {
+  //     API.saveBook({
+  //       title: formObject.title,
+  //       author: formObject.author,
+  //       synopsis: formObject.synopsis
+  //     })
+  //       .then(res => loadBooks())
+  //       .catch(err => console.log(err));
+  //   }
+  // };
 
 
   // console.log("resposne " + response);
@@ -99,18 +110,7 @@ function Books() {
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload books from the database
-  // function handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   if (formObject.title && formObject.author) {
-  //     API.saveBook({
-  //       title: formObject.title,
-  //       author: formObject.author,
-  //       synopsis: formObject.synopsis
-  //     })
-  //       .then(res => loadBooks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
+
 
   return (
     <Container fluid>
@@ -131,8 +131,14 @@ function Books() {
             <h1>Books On My List</h1>
           </Jumbotron>
           <div>
-            {books.length ? books.map(book => <Card book={book} key={book.id} authorString={authorString} />) : <p>Please search for a book!</p>}
-          
+            {books.length ? books.map(book =>
+              <Card
+                book={book}
+                key={book.id}
+                // authorString={authorString} 
+                saveBook={saveBook(book)} />
+                ) : <p>Please search for a book!</p>}
+
           </div>
           {/* {books.length ? (
               <List books={books}>

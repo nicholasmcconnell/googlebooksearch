@@ -31,7 +31,7 @@ function Cards(props) {
                 <p className="card-text">{props.book.volumeInfo.description}</p>
                 <div className="buttonDiv text-center d-flex justify-content-center">
                     <a href="#" className="btn btn-primary">Save!</a>
-                    <a target="_blank" href={props.book.volumeInfo.infoLink} className="btn btn-primary">More Info!</a>
+                    <a target="_blank" href={props.book.volumeInfo.infoLink} onClick={() => props.saveBook(props.book.volumeInfo.id)} className="btn btn-primary">More Info!</a>
                 </div>
             </div>
 

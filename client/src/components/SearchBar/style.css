@@ -1,16 +1,29 @@
-form.search {
-  /* overflow: auto;
+/* form.search {
+  overflow: auto;
   margin-bottom: 10px;
-  margin-top: 10px; */
-}
+  margin-top: 10px;
+} */
 
 button, input {
   align-self: center;
   margin-top: 10px;
-  /* margin-left: 20px; */
+  margin-left: 20px;
   border-radius: 5px;
   height: 40px;
   font-size: 30px;
+}
+
+button {
+  padding: 0, 10px, 50px, 10px;
+  margin-left: 20%;
+  height: 50px;
+ border-width: medium;
+ border-color: gray;
+
+}
+
+form{
+margin-left: 33%;
 }
 
 
@@ -18,6 +31,7 @@ button, input {
 label {
   font-weight: bold;
   margin-top: 20px;
+  font-size: 40px;
 
 }
 
@@ -26,7 +40,3 @@ label {
   font-size: 20px; */
 }
 
-.formContainer {
-  
-  /* align-items: center; */
-}

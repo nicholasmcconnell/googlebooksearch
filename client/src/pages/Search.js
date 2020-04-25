@@ -77,11 +77,12 @@ function Books() {
           <Jumbotron>
             <h1>Google Books</h1>
           </Jumbotron>
-
-          <SearchBar
-            handleInputChange={handleInputChange}
-            handleFormSubmit={handleFormSubmit}
-          />
+          <div>
+            <SearchBar
+              handleInputChange={handleInputChange}
+              handleFormSubmit={handleFormSubmit}
+            />
+          </div>
           <div>
             {books.length ? books.map(book =>
               <Card

@@ -11,7 +11,7 @@ function Cards(props) {
                 <div className="card-body">
                     <h4 className="card-title">{props.book.title}</h4>
                     <h4 className="card-title">{props.book.authors.join(", ")}</h4>
-                    <p className="card-text">{props.book.description}</p>
+                    <p className="card-text description">{props.book.description}</p>
                     <div className="buttonDiv text-center d-flex justify-content-center">
                         <a onClick={!props.saveView ? () => props.saveBook(props.book) : () => props.deleteBook(props.book._id)} className="btn btn-primary">{!props.saveView ? "Save" : "Delete"}</a>
                         <a href="#" target="_blank" href={props.book.infoLink} className="btn btn-primary">More</a>

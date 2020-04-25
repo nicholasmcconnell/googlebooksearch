@@ -30,18 +30,20 @@ function SearchBar(props) {
 
         <input
           // onChange={props.handleInputChange}
+          
           name="RecipeSearch"
           value={props.search}
           onChange={props.handleInputChange}
           placeholder="Search For a Book!"
         />
       </div>
-
       <button
+      className="btn btn-secondary"
         onClick={props.handleFormSubmit}
         type="success"
         className="input-lg">Submit
           </button>
+
     </form>
     </div>
 

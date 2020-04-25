@@ -1,26 +1,4 @@
-table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
 
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr {
-  background-color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  width: 100%;
-}
-
-tbody tr:nth-child(odd){
-  background-color: lightgray;
-  color:black;
-  border-radius: 10px;
-}
 
 .btn {
   
@@ -29,18 +7,20 @@ tbody tr:nth-child(odd){
  
 }
 
-.cardContainer {
+/* .cardContainer {
   float: right;
-}
+} */
 
 .card {
   margin-right: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
-  max-height: 25%;
+  max-height: 50%;
   max-width: 25%;
   float: left;
   align-items: center;
+  margin-left: 5%;
+
   
 }
 

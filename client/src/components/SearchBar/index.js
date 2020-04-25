@@ -1,27 +1,31 @@
 import React from "react";
+import { Col, Row, Container } from "../Grid";
 import "./style.css";
 
 
 function SearchBar(props) {
   return (
-    <div className="container">
+    <Container>
+      <Row>
+        <Col size="md-12">
       <form className="search">
         <div className="form-group">
-          <h3>Search:</h3>
-          <input
+          <h3>Search:  <input
             // onChange={props.handleInputChange}
             name="RecipeSearch"
             value={props.search}
             onChange={props.handleInputChange}
-            placeholder="Search For a Recipe"
-          />
+            placeholder="Search For a Book!"
+          /></h3> 
         </div>
         <button
           onClick={props.handleFormSubmit}
           type="success"
           className="input-lg">Submit</button>
       </form>
-    </div>
+      </Col>
+      </Row>
+    </Container>
   );
 }
 

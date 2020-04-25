@@ -32,6 +32,8 @@ tbody tr:nth-child(odd){
 .card {
   border-radius: 10px;
   margin-bottom: 10px;
+  max-height: 25%;
+  max-width: 25%;
 }
 
 .card-img-top {

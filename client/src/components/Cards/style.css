@@ -29,11 +29,19 @@ tbody tr:nth-child(odd){
  
 }
 
+.cardContainer {
+  float: right;
+}
+
 .card {
+  margin-right: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   max-height: 25%;
   max-width: 25%;
+  float: left;
+  align-items: center;
+  
 }
 
 .card-img-top {

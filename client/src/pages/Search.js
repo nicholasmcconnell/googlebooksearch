@@ -82,13 +82,6 @@ function Books() {
             handleInputChange={handleInputChange}
             handleFormSubmit={handleFormSubmit}
           />
-
-        </Col>
-      </Row>
-    
-      <Row>
-        <Col size="md-2 sm-12"></Col>
-        <Col size="md-8 ">
           <div>
             {books.length ? books.map(book =>
               <Card
@@ -105,8 +98,17 @@ function Books() {
             ) : <p></p>}
 
           </div>
+
+
         </Col>
-        <Col size="md-2 sm-12"></Col>
+      </Row>
+
+      <Row>
+        <Col size="md-3 sm-12"></Col>
+        <Col size="md-6 ">
+
+        </Col>
+        <Col size="md-3 sm-12"></Col>
       </Row>
 
     </Container>

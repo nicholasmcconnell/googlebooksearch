@@ -1,25 +1,30 @@
 form.search {
   overflow: auto;
   margin-bottom: 10px;
-}
-
-form.search button[type="submit"] {
-  /* float: right; */
   margin-top: 10px;
 }
 
-.form-group {
-
-  /* margin-left: 40px;
-  margin-right: 40px; */
-
+button, input {
+  /* float: right; */
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 30px;
 }
 
-h3 {
+
+
+text {
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .form-control {
   height: 50px;
   font-size: 20px;
+}
+
+form {
+  margin-left: 25%;
 }

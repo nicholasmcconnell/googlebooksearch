@@ -24,7 +24,7 @@ function Nav() {
             <a class="nav-link" href="/search">Search</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/save">Save</a>
+            <a class="nav-link" href="/save">Saved</a>
           </li>
 
         </ul>

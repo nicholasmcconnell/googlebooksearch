@@ -10,18 +10,23 @@ function SearchBar(props) {
         <Col size="md-12">
       <form className="search">
         <div className="form-group">
-          <h3>Search:  <input
+          <h3>Search:  
+            
+            <input
             // onChange={props.handleInputChange}
             name="RecipeSearch"
             value={props.search}
             onChange={props.handleInputChange}
             placeholder="Search For a Book!"
-          /></h3> 
-        </div>
+          />
+          
         <button
           onClick={props.handleFormSubmit}
           type="success"
-          className="input-lg">Submit</button>
+          className="input-lg">Submit
+          </button>
+          </h3> 
+        </div>
       </form>
       </Col>
       </Row>

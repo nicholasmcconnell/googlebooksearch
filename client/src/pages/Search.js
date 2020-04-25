@@ -102,7 +102,7 @@ function Books() {
               // saveView={true}
               />
 
-            ) : <p>Please search for a book!</p>}
+            ) : <p></p>}
 
           </div>
         </Col>

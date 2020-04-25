@@ -6,6 +6,7 @@ import API from "../utils/API";
 import Card from "../components/Cards"
 
 function Save(props) {
+  // event.preventDefault();
   const [books, setBooks] = useState({})
 
   // When this component mounts, grab the book with the _id of props.match.params.id
@@ -21,45 +22,50 @@ function Save(props) {
     console.log(id);
 
     API.deleteBook(id)
-      .then()
-      .catch(err => console.log(err));
-  }
+      .then(() =>{
+        API.getBooks()
+          .then(res => setBooks(res.data))
+          .catch(err => console.log(err));
+      })
+      .catch (err => console.log(err));
 
-  return (
-    <Container fluid>
-      <Row>
-        <Col size="md-12">
-          <Jumbotron>
-            <h1>
-              Your Saved Books!
+}
+
+return (
+  <Container fluid>
+    <Row>
+      <Col size="md-12">
+        <Jumbotron>
+          <h1>
+            Your Saved Books!
               </h1>
-          </Jumbotron>
-          <div>
-            {books.length ? books.map(book =>
-              <Card
-                book={book}
-                key={book.id}
-                // authorString={authorString} 
-                // saveBook={saveBook} 
+        </Jumbotron>
+        <div>
+          {books.length ? books.map(book =>
+            <Card
+              book={book}
+              key={book.id}
+              // authorString={authorString} 
+              // saveBook={saveBook} 
 
-                // For save page
-                // deleteBook={deleteBook}
-                saveView={true}
-              />
+              // For save page
+              deleteBook={deleteBook}
+              saveView={true}
+            />
 
-            ) : <p>Please search for a book!</p>}
+          ) : <p>Please search for a book!</p>}
 
-          </div>
-        </Col>
-      </Row>
+        </div>
+      </Col>
+    </Row>
 
-      <Row>
-        <Col size="md-2">
-          <Link to="/">← Back to Searh</Link>
-        </Col>
-      </Row>
-    </Container>
-  );
+    <Row>
+      <Col size="md-2">
+        <Link to="/">← Back to Searh</Link>
+      </Col>
+    </Row>
+  </Container>
+);
 }
 
 

@@ -11,6 +11,7 @@ import { titleCase } from 'title-case';
 import Card from '../components/Cards'
 
 function Books() {
+  // event.preventDefault();
   // Setting our component's initial state
   const [books, setBooks] = useState([]);
   const [search, setSearch] = useState("");
@@ -32,6 +33,7 @@ function Books() {
 
 
   const handleInputChange = event => {
+    event.preventDefault();
     const { value } = event.target;
     console.log(value);
 
@@ -60,6 +62,7 @@ function Books() {
   }
 
   const saveBook = (book) => {
+    // event.preventDefault();
     console.log(book);
 
     API.saveBook(book)

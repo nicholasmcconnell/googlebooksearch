@@ -20,7 +20,7 @@ app.use(routes);
 //   res.send("route in server hit")
 // })
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds019068.mlab.com:19068/heroku_7lmtcdvp");
 
 // Start the API server
 app.listen(PORT, function() {

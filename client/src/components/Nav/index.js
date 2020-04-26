@@ -3,13 +3,6 @@ import { Redirect } from 'react-router-dom';
 
 function Nav() {
 
-  function handleClick(e) {
-    e.preventDefault();
-   
-    console.log('The link was clicked.');
-  }
-
-
   return (
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -26,12 +19,9 @@ function Nav() {
           <li className="nav-item active">
             <a className="nav-link" href="/save">Saved</a>
           </li>
-
         </ul>
-
       </div>
     </nav>
-
   );
 }
 

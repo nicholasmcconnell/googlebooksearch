@@ -1,7 +1,9 @@
-p {
-    color: black;
-}
+
 
 .navbar {
     margin-bottom: 10px;
+    background-color: blue;
+}
+
+nav {
 }

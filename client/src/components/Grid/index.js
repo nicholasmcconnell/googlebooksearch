@@ -26,3 +26,9 @@ export function Col({ size, children }) {
     </div>
   );
 }
+
+export const Collapse = ({ navState, children, id }) => { 
+  const classes = navState ? 'navbar-collapse collapse show' : 'navbar-collapse collapse';
+
+   return <div className={classes} id={id}>{children}</div>
+}

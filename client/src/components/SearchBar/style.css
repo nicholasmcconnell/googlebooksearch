@@ -1,32 +1,44 @@
+.formContainer {
+  width: 50%;
+  background-color: blueviolet;
+  margin-left: 25%;
+}
 
-button, input {
+.search-group {
+  width: 80%;
+}
+
+/* button, input {
   align-self: center;
   margin-top: 10px;
   margin-left: 20px;
   border-radius: 5px;
   height: 40px;
   font-size: 30px;
-}
+} */
 
 button {
   padding: 0, 10px, 50px, 10px;
-  margin-left: 20%;
+  margin-left: 40%;
   height: 50px;
- border-width: medium;
- border-color: gray;
-
+  width: 20%;
+  border-width: medium;
+  border-color: gray;
 }
 
-form{
-margin-left: 33%;
+form {
+  /* margin-left: 33%; */
 }
-
-
 
 label {
   font-weight: bold;
   margin-top: 20px;
   font-size: 40px;
-
 }
 
+@media (max-width: 375px) {
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+}

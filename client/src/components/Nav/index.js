@@ -28,7 +28,7 @@ export default function navBar() {
                 </li>
                 <li className={pathname === "/save" ? "nav-item active" : "nav-item"}>
                     <Link to="/save" className={'nav-link'}>
-                        Saved!
+                        Saved
                     </Link>    
                 </li>
               </ul>

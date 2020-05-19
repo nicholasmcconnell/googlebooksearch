@@ -15,7 +15,7 @@ function SearchBar(props) {
             name="RecipeSearch"
             value={props.search}
             onChange={props.handleInputChange}
-            placeholder="Search For a Book!"
+            placeholder="Search!"
           />
         </div>
 

@@ -33,7 +33,7 @@ return (
       <Col size="md-12">
         <Jumbotron>
           <h1>
-            Your Saved Books!
+            Saved Books!
               </h1>
         </Jumbotron>
         <div>

@@ -29,19 +29,27 @@ img {
   height: 100px;
   overflow: hidden;
 }
+
+.container {
+  /* padding-left: 10%; */
+  background-color: blueviolet;
+  width: 100%;
+}
 .card {
-  /* max-height: 10% !important; */
-  min-height: 20% !important;
-  /* display: flex; */
+  max-height: 20% !important;
+  min-height: 10% !important;
+  min-width: 50% !important;
+  /* height: 20%; */
+  
+  /* justify-content: space-between; */
 
-  margin-right: 10px;
+  /* margin-right: .1%; */
   border-radius: 10px;
-  margin-bottom: 10px;
-
+  margin-bottom: 5%;
   float: left;
-  align-items: center;
-  margin-left: 5%;
-
+  /* align-items: center; */
+  margin-left: 0px;
+  margin-top: 2%;
   
 }
 
@@ -66,4 +74,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 414px){
+
 }

@@ -2,11 +2,14 @@ import React from 'react'
 import '../Cards/style.css';
 
 function Cards(props) {
+    console.log(props.saveView);
     const image = props.book.imageLinks ? props.book.imageLinks.smallThumbnail : props.book.image;
 
     return (
-        <div>
-            <div className="card offset-1 col-md-5" style={{ display: "flex" }}>
+        <div className='container'>
+            <div className="card offset-1 col-md-4" 
+            style={{ display: "flex" }}
+            >
                 <img src={image} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h4 className="card-title">{props.book.title}</h4>

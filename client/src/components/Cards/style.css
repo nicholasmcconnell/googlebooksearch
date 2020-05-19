@@ -23,6 +23,7 @@ a{
 
 img {
   height: 300px;
+  margin-right: 25%;
 }
 .crop {
   height: 100px;
@@ -59,4 +60,10 @@ img {
 .description {
   max-height: 10% !important;
 
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,7 +1,7 @@
 .formContainer {
-  width: 50%;
-  background-color: blueviolet;
-  margin-left: 25%;
+  width: 100%;
+  /* background-color: blueviolet; */
+  margin-left: 0%;
 }
 
 .search-group {
@@ -24,21 +24,39 @@ button {
   width: 20%;
   border-width: medium;
   border-color: gray;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
 }
 
-form {
-  /* margin-left: 33%; */
+.form-group {
+  margin-left: 33%;
+  /* margin-top: 50px; */
 }
 
 label {
   font-weight: bold;
-  margin-top: 20px;
-  font-size: 40px;
+  margin-top: 10px;
+  font-size: 30px;
+  margin-right: 1vw;
+}
+
+input {
+  height: 35px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: -10px;
+  width: 30%
 }
 
 @media (max-width: 375px) {
   button {
-    width: 100%;
-    margin-left: 0;
+    width: 75%;
+    margin-left: 15%;
+  }
+
+  .form-group {
+    margin-left: 15%;
+    /* margin-top: 50px; */
   }
 }

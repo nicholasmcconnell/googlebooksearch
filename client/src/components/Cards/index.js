@@ -10,7 +10,7 @@ function Cards(props) {
                 <img src={image} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h4 className="card-title">{props.book.title}</h4>
-                    <h4 className="card-title">{props.book.authors.join(", ")}</h4>
+                    <h4 className="card-title">{!props.book.authors ? '' : props.book.authors.join(", ")}</h4>
                     {/* <div data-spy="scroll" data-target="#navbar-example2" data-offset="0"> */}
                     <p className="crop description">{props.book.description}</p>
 

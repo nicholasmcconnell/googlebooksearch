@@ -1,9 +1,6 @@
-# google-books-tool
-Search and save utility for the google books API.
-[Company Directory](https://succeeder-reader.herokuapp.com/)
-
-
-# 16-The Reader Succeeder
+# Google Book Search
+Search, save, and delete application utilizing the google books API.
+[Company Directory](https://googlebooksearchnm.herokuapp.com/)
 
 Reading list powered by google books
 
@@ -19,7 +16,7 @@ Reading list powered by google books
 ___
 
 ## General info
-This is a full stack, MERN  application built with ReactJS.  Powered by the google book API, this a reading list with which user's can search for new books to read. The results will display useful information such as synopsis, cover images and link to more publication details and purchase options.  Books can be saved in a database for later review and removed when checked off.     
+This is a full stack, MERN  application built with ReactJS.  Powered by the google book API, it is a reading list with which user's can search for new books to read. The results will display useful information such as synopsis, cover images and links to more publication details and purchase options.  Books can be saved in a database for later review and removed.     
 
 ___
 
@@ -28,6 +25,7 @@ ___
 * React-router-dom
 * axios
 * express
+* Bootstrap
 
 	
 ## Setup
@@ -40,27 +38,14 @@ ___
 
 ## Links:
 
-[Github Repo](https://github.com/drthisguy/18-react-reading-list)
+[Github Repo](https://github.com/nicholasmcconnell/googlebooksearch)
 
-[Deployed Website](https://succeeder-reader.herokuapp.com)
-
+[Deployed Website](https://googlebooksearchnm.herokuapp.com/)
 ___
 
 ## Screens:
 ![image](https://user-images.githubusercontent.com/48693333/80837492-ddd81c00-8bc4-11ea-974a-f92b8f9a0820.png)
 
-
 ![image](https://user-images.githubusercontent.com/48693333/80837580-14ae3200-8bc5-11ea-8548-a7587317b039.png)
-
 ___
 
-## Sources
-https://reactjs.org/docs  
-reacttraining.com. 
-https://react.semantic-ui.com.  
-https://stackoverflow.com
-
-
-## Issues & Contact
-
-There may be a failure from either page ('/' or '/saved') while rendering/re-rendering the search result or database query due to missing or mutated data values.  I believe I accounted for all possibilities but you never know. 

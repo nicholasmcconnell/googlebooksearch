@@ -47,3 +47,6 @@ ___
 ![image](assets/googlebooksearch.gif)
 ___
 
+## Contributors
+
+Nick McConnell

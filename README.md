@@ -1,6 +1,5 @@
 # Google Book Search
 Search, save, and delete application utilizing the google books API.
-[Company Directory](https://googlebooksearchnm.herokuapp.com/)
 
 Reading list powered by google books
 

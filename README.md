@@ -1,8 +1,6 @@
 # Google Book Search
 Search, save, and delete application utilizing the google books API.
 
-Reading list powered by google books
-
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)

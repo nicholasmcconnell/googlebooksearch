@@ -49,4 +49,4 @@ ___
 
 ## Contributors
 
-Nick McConnell
+Nick McConnell - Full Stack Web Developer

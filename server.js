@@ -1,13 +1,16 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+require('dotenv').config();
+const cors = require('cors');
+
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -15,12 +18,20 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// app.get("/test", (req, res) => {
-//   console.log("route in server hit")
-//   res.send("route in server hit")
-// })
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds019068.mlab.com:19068/heroku_7lmtcdvp");
+mongoose.connect(
+  ("mongodb://localhost/googlebooks" || process.env.MONGODB_CONNECTION_STRING), {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+  }, (err) => {
+      if(err){
+          console.log(err);
+          throw err;
+      } else{ 
+      (console.log("Connection to database established"));
+      }
+  })
 
 // Start the API server
 app.listen(PORT, function() {

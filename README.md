@@ -1,5 +1,5 @@
 # Google Book Search
-Search, save, and delete application utilizing the google books API.
+A MERN stack application utilizing the Google Books API where users can search, save, and delete books from a reading list.
 
 ## Table of contents
 * [General info](#general-info)
